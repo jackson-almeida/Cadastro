@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -16,6 +17,10 @@ import com.example.cadastro.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
     private Formulario form;
     private ActivityMainBinding acb;
+
+
+    private Button buttonClear;
+    private Button buttonSave;
 
     private EditText etName;
     private EditText etPhone;
@@ -31,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        buttonClear = findViewById(R.id.buttonLimpar);
+        buttonSave = findViewById(R.id.buttonSalvar);
+
         etName = findViewById(R.id.etName);
         etPhone = findViewById(R.id.etPhone);
         etEmail = findViewById(R.id.etEmail);
@@ -40,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         etCity = findViewById(R.id.etCidade);
         spUF = findViewById(R.id.spinnerUF);
 
-        acb.buttonLimpar.setOnClickListener(new View.OnClickListener() {
+        buttonClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 etName.setText("");
@@ -54,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        acb.buttonSalvar.setOnClickListener(new View.OnClickListener() {
+        buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Formulario form = new Formulario();
