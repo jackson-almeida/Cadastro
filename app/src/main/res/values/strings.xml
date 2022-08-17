@@ -3,7 +3,7 @@
     <string name="etName"></string>
     <string name="etCity"></string>
     <string-array name="valores_uf">
-        <item>AC</item>
+        <item value="AC">AC</item>
         <item>AL</item>
         <item>AP</item>
         <item>AM</item>
